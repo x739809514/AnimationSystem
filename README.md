@@ -2,12 +2,14 @@ The traditional Animation Controllers are complex and easy to be messy. We can u
 
 ### Architecture of System
 I want the system to switch state between several animation clips easily, so I need a `mixer` node, and I also need a default state, such as idle. In addition, I  also want to have a random animation selector to play random animation.
+
 <img width="644" alt="image" src="https://github.com/x739809514/AnimationSystem/assets/53636082/c87b312f-fafe-445d-b749-d5b09d9c96cd">
 
 
 ### Code Structure
 First, we need to have an abstract class which is called `AnimBehavior`, this class is the parent of all animation nodes, and we can build child classes which are inherent in it, such as `AnimUnit`, and Mixer. 
 Second, I build an empty node -- `AnimAdapter`, which controls `AnimBehavior`. In addition, `AnimAdapter` is also a node, but it does nothing instead of controlling behaviour.
+
 <img width="644" alt="image" src="https://github.com/x739809514/AnimationSystem/assets/53636082/febedcec-d3e1-4ca0-95ab-177cff18dd6b">
 
 
